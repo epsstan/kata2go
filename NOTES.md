@@ -28,7 +28,7 @@
 ## Kata Backend
 * The backend is relatively simple as all it does is serve Katas to the UI and submits requests to the Executor
 * Backend needs to know the address of the executors ; either via static configuration or dynamic discovery
-* Kata's can be initially saved to local disk and then moved to some cloud storage 
+* Katas can be initially saved to local disk and then moved to some cloud storage 
 
 ## Kata UI
 * UI can be simple to begin with with basic controls to view sources files and submit the Kata
