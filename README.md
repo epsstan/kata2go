@@ -10,6 +10,11 @@ A Kata can be structured as a unit test that fails one or more assertions. The l
 
 Clearly, a Kata can be completed in an IDE. The goal of Kata2Go is to provide a simple and easy to complete code Katas using just a web browser.
 
+This is also a fun exercise to explore some interesting topics :
+* Java compiler API
+* Java 9 REPL
+* Sandboxing execution of un-trusted user code
+
 ## Prior Art
 
 Kata2Go is inspired by [Tour of Go](https://tour.golang.org/welcome/1)
