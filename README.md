@@ -16,4 +16,4 @@ Kata2Go is inspired by [Tour of Go](https://tour.golang.org/welcome/1)
 
 ## Want to contribute ?
 
-Contributors welcome !! See the [contribution guidelines]() and [design notes](https://github.com/epsstan/kata2go/blob/dev/NOTES.md)
+Contributors welcome !! See the [contribution guidelines](https://github.com/epsstan/kata2go/blob/dev/CONTRIBUTING.md) and [design notes](https://github.com/epsstan/kata2go/blob/dev/NOTES.md)
