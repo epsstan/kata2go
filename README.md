@@ -14,6 +14,8 @@ This is also a fun exercise to explore some interesting topics :
 * Java compiler API
 * Java 9 REPL
 * Sandboxing execution of un-trusted user code
+* Parsing Java source files
+* Programmatically creating Java source files
 
 ## Prior Art
 
