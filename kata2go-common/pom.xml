@@ -24,12 +24,24 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>kata2go-executor</artifactId>
-    <name>Kata2Go Executor</name>
+    <artifactId>kata2go-common</artifactId>
+    <name>Kata2Go Common</name>
     <packaging>jar</packaging>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr4-maven-plugin</artifactId>
+                <version>4.7</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>antlr4</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -49,27 +61,25 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
 
     <dependencies>
 
         <dependency>
-            <groupId>com.goldmansachs.kata2go</groupId>
-            <artifactId>kata2go-common</artifactId>
-            <version>0.0.0-SNAPSHOT</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
             <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-core</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-forms</artifactId>
         </dependency>
 
         <dependency>
@@ -83,9 +93,8 @@
         </dependency>
 
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>compile</scope>
+            <groupId>org.eclipse.collections</groupId>
+            <artifactId>eclipse-collections-testutils</artifactId>
         </dependency>
 
         <dependency>
@@ -94,8 +103,13 @@
         </dependency>
 
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
         </dependency>
 
         <dependency>
@@ -104,14 +118,28 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-compress</artifactId>
+            <groupId>com.squareup</groupId>
+            <artifactId>javapoet</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-testing</artifactId>
-            <scope>test</scope>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
         </dependency>
 
         <dependency>
@@ -120,6 +148,6 @@
             <scope>test</scope>
         </dependency>
 
-    </dependencies>
 
+    </dependencies>
 </project>

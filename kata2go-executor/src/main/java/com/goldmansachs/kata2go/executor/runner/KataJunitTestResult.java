@@ -14,22 +14,18 @@
  under the License.
  */
 
-package com.goldmansachs.kata2go.executor.domain;
+package com.goldmansachs.kata2go.executor.runner;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.goldmansachs.kata2go.executor.compiler.CompilationResult;
+import junit.framework.TestResult;
 import org.immutables.value.Value;
 
-@Value.Immutable
-@JsonSerialize(as = ImmutableExecutorResult.class)
-@JsonDeserialize(as = ImmutableExecutorResult.class)
-public interface ExecutorResult
-{
-    @JsonProperty
-    CompilationResult compilationResult();
+import java.util.Optional;
 
-    @JsonProperty
-    RunResult runResult();
+
+@Value.Immutable
+public interface KataJunitTestResult
+{
+    TestResult junitResult();
+    String stdOut();
+    Optional<String> stdErr();
 }

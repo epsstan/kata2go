@@ -54,7 +54,7 @@
     <dependencies>
         <dependency>
             <groupId>com.goldmansachs.kata2go</groupId>
-            <artifactId>kata2go-tools</artifactId>
+            <artifactId>kata2go-common</artifactId>
             <version>0.0.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

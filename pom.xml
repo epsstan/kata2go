@@ -30,7 +30,7 @@
     <name>Kata2Go</name>
 
     <modules>
-        <module>kata2go-tools</module>
+        <module>kata2go-common</module>
         <module>kata2go-executor</module>
         <module>kata2go-backend</module>
         <module>kata2go-backend-distribution</module>

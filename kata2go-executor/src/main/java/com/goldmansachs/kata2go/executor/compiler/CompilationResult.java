@@ -1,5 +1,5 @@
 /*
- Copyright 2017 Goldman Sachs.
+ Copyright 2016 Goldman Sachs.
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
@@ -14,22 +14,28 @@
  under the License.
  */
 
-package com.goldmansachs.kata2go.executor.domain;
+package com.goldmansachs.kata2go.executor.compiler;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.goldmansachs.kata2go.executor.compiler.CompilationResult;
 import org.immutables.value.Value;
 
+import java.util.List;
+import java.util.Map;
+
 @Value.Immutable
-@JsonSerialize(as = ImmutableExecutorResult.class)
-@JsonDeserialize(as = ImmutableExecutorResult.class)
-public interface ExecutorResult
+@JsonSerialize(as = ImmutableCompilationResult.class)
+@JsonDeserialize(as = ImmutableCompilationResult.class)
+public interface CompilationResult
 {
     @JsonProperty
-    CompilationResult compilationResult();
+    boolean successful();
 
     @JsonProperty
-    RunResult runResult();
+    List<String> errors();
+
+    @JsonIgnore
+    Map<String, ByteArrayFileObject> compiledClasses();
 }

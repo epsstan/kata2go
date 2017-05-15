@@ -16,15 +16,15 @@
 
 package com.goldmansachs.kata2go.executor.resource;
 
+import com.goldmansachs.kata2go.executor.compiler.CompilationResult;
+import com.goldmansachs.kata2go.executor.compiler.KataCompiler;
 import com.goldmansachs.kata2go.executor.domain.ExecutorResult;
 import com.goldmansachs.kata2go.executor.domain.ImmutableExecutorResult;
 import com.goldmansachs.kata2go.executor.domain.ImmutableRunResult;
-import com.goldmansachs.kata2go.tools.compiler.CompilationResult;
-import com.goldmansachs.kata2go.tools.compiler.KataCompiler;
+import com.goldmansachs.kata2go.executor.runner.KataJunitTestResult;
+import com.goldmansachs.kata2go.executor.runner.StdOutStdErrCapturingKataRunner;
 import com.goldmansachs.kata2go.tools.domain.KataDefinition;
 import com.goldmansachs.kata2go.tools.domain.KataExercise;
-import com.goldmansachs.kata2go.tools.runner.KataJunitTestResult;
-import com.goldmansachs.kata2go.tools.runner.StdOutStdErrCapturingKataRunner;
 import com.goldmansachs.kata2go.tools.store.KataStore;
 import org.eclipse.collections.api.map.MutableMap;
 import org.eclipse.collections.impl.factory.Lists;
